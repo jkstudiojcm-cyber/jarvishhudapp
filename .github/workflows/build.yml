@@ -17,9 +17,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
       - name: Build Debug APK
         run: gradle assembleDebug
 
@@ -28,3 +25,4 @@ jobs:
         with:
           name: JARVIS-HUD-App
           path: app/build/outputs/apk/debug/app-debug.apk
+concurrency: 
